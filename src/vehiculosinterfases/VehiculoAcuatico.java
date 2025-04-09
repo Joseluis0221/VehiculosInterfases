@@ -34,10 +34,10 @@ public class VehiculoAcuatico extends Vehiculo implements Vela {
   
     public void recomendarVelocidad(int velocidadViento) {
         throw new UnsupportedOperationException("Not supported yet."); 
+
     }
     
-    
-    
+ } 
 
     
     public void mostrarDetalles() {
