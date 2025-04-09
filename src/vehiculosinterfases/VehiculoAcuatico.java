@@ -9,7 +9,11 @@ package vehiculosinterfases;
  *
  * @author usuario
  */
-public class VehiculoAcuatico {
+public class VehiculoAcuatico extends Vehiculo implements Vela {
+    private String tipo;
+    private int capacidadPasajeros;
+    
+    
     
     
 }
