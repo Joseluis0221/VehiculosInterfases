@@ -12,7 +12,8 @@ public class VehiculoAcuatico extends Vehiculo implements Vela {
                
     }
 
-    @Override
+  
+
     public void recomendarVelocidad(int velocidadViento) { 
         if(velocidadViento > 80){
              System.out.println("el viento es muy fuerte no navegar");             
@@ -21,6 +22,23 @@ public class VehiculoAcuatico extends Vehiculo implements Vela {
             
         }
     }
+  
+   public void acelerar(int incremento) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public void frenar(int decremento) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+  
+    public void recomendarVelocidad(int velocidadViento) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+    
+    
+    
+
     
     public void mostrarDetalles() {
         System.out.println("vehiculo acuatico - tipo: " + tipoAcuatico + ",capacidad:" + capacidadPasajeros );
