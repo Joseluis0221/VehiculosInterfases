@@ -21,9 +21,6 @@ public class VehiculoAcuatico extends Vehiculo implements Vela {
     @Override
     public void recomendarVelocidad(int velocidadViento) {
         throw new UnsupportedOperationException("Not supported yet."); 
-    }
-    
-    
-    
+    } 
     
 }
