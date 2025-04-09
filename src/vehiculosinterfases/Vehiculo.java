@@ -1,22 +1,33 @@
 package vehiculosinterfases;
 
 public  abstract class Vehiculo {
-    protected int velocidadActual;
-    protected int velocidadMaxima;
+    protected double velocidadActual;
+    protected double velocidadMaxima;
     
-    public Vehiculo(int velocidadMaxima) {
-        this.velocidadActual = 0;
+    public Vehiculo(double velocidadActual, double velocidadMaxima) {
+        this.velocidadActual = velocidadActual;
         this.velocidadMaxima = velocidadMaxima;
+                       
     }
     
-    public abstract void acelerar(int incremento);
-    public abstract void frenar (int decremento);
+    public void acelerar(double incremento) { 
+        velocidadActual += incremento;
+        if(velocidadActual > velocidadMaxima) {
+            velocidadActual = velocidadMaxima;
+            
+        }
+    }
+    
+    public void frenar(double decremento) { 
+        velocidadActual -= decremento;
+        if(velocidadActual <0) { 
+           velocidadActual = 0;
+              
+        }
+    }
     
     public void imprimir() {
-        System.out.println("Velocidad Actual:" + velocidadActual + "km/h");
-        System.out.println("Velocidad Maxima:" + velocidadMaxima + "km/h");
-    
-                
+        System.out.println("velocidad actual: " + velocidadActual + "km/h");
+        System.out.println("velocidad maxima: " + velocidadMaxima + "km/h");
+
     }
-    
-}
