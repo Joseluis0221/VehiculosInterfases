@@ -1,3 +1,6 @@
+
+import vehiculosinterfases.VehiculoTerrestre;
+
 public class Main {
     public static void main(String[] args){
         VehiculoTerrestre tractor = new VehiculoTerrestre(60, 4, "agricola");
