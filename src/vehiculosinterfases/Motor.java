@@ -1,9 +1,6 @@
 
-package vehiculosinterfases;
-
+package vehiculosinterface;
 
 public interface Motor {
-    double calcularRevolucionesMotor(int fuerza, int radio);
-    
-    
+    int calcularRevolucionesMotor(int fuerza, int radio);
 }

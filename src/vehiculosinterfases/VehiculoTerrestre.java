@@ -1,23 +1,40 @@
+package vehiculosinterface;
 
-package vehiculosinterfases;
-
-
-public class VehiculoTerrestre extends Vehiculo implements motor {
+public class VehiculoTerrestre extends Vehiculo implements Motor {
     private int cantidadLlantas;
-    private String usoVehiculo;
+    private String uso;
 
-    public VehiculoTerrestre(double velocidadActual, double velocidadMaxima, int cantidadLlantas, String usoVehiculo) {
-        super(velocidadActual, velocidadMaxima);
+    public VehiculoTerrestre(int velocidadMaxima, int cantidadLlantas, String uso) {
+        super(velocidadMaxima);
         this.cantidadLlantas = cantidadLlantas;
-        this.usoVehiculo = usoVehiculo;
-       
+        this.uso = uso;
     }
-    public double calcularRevolucionesMotor(int fuerza,int radio) { 
+
+    @Override
+    public void acelerar(int incremento) {
+        velocidadActual += incremento;
+        if (velocidadActual > velocidadMaxima) {
+            velocidadActual = velocidadMaxima;
+        }
+    }
+
+    @Override
+    public void frenar(int decremento) {
+        velocidadActual -= decremento;
+        if (velocidadActual < 0) {
+            velocidadActual = 0;
+        }
+    }
+
+    @Override
+    public int calcularRevolucionesMotor(int fuerza, int radio) {
         return fuerza * radio;
-        
     }
-    
-    public void mostrarDetalles() {
-        System.out.println("vehiculo terrestre - uso:" + usoVehiculo + ",Llantas:" + cantidadLlantas);
+
+    @Override
+    public void imprimir() {
+        super.imprimir();
+        System.out.println("Cantidad de Llantas: " + cantidadLlantas);
+        System.out.println("Uso del Vehículo: " + uso);
     }
 }

@@ -1,3 +1,4 @@
+
 package vehiculosinterface;
 
 public abstract class Vehiculo {
